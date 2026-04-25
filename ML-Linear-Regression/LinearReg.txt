@@ -1,0 +1,109 @@
+# 📘 Linear Regression Notes
+
+## 🔹 Definition
+
+Linear Regression is a machine learning algorithm used to predict a continuous value by fitting a straight line to the data.
+
+---
+
+## 🔹 Equation
+
+y = mx + b
+
+Where:
+
+* x = Independent variable (input)
+* y = Dependent variable (output)
+* m = Slope (rate of change)
+* b = Intercept (starting value)
+
+---
+
+## 🔹 Slope (m)
+
+* Represents how much y changes when x increases by 1
+* Determines steepness of the line
+
+### Cases:
+
+* m > 0 → Positive relationship (y increases with x)
+* m < 0 → Negative relationship (y decreases with x)
+* m = 0 → No relationship (horizontal line)
+
+---
+
+## 🔹 Intercept (b)
+
+* Value of y when x = 0
+* Starting point of the line on y-axis
+
+---
+
+## 🔹 Goal of Linear Regression
+
+To find the best values of m and b such that predicted values are as close as possible to actual values.
+
+---
+
+## 🔹 Prediction Formula
+
+y(predicted) = m × x + b
+
+---
+
+## 🔹 Error (Mean Squared Error - MSE)
+
+MSE = (1/n) Σ (y - ŷ)²
+
+Where:
+
+* y = actual value
+* ŷ = predicted value
+
+👉 Lower MSE = better model
+
+---
+
+## 🔹 Steps in Linear Regression
+
+1. Load data
+2. Split into input (X) and output (Y)
+3. Train model using training data
+4. Predict using test data
+5. Evaluate using MSE
+6. Use model for new predictions
+
+---
+
+## 🔹 Train-Test Split
+
+* Training data → used to train model
+* Testing data → used to evaluate model
+
+👉 Purpose:
+To check model performance on unseen data and avoid overfitting
+
+---
+
+## 🔹 Key Concepts
+
+* Overfitting: Model memorizes training data, performs poorly on new data
+* Underfitting: Model is too simple, cannot capture pattern
+
+---
+
+## 🔹 Real-Life Examples
+
+* House price prediction
+* Salary prediction
+* Marks prediction
+
+---
+
+## 🔹 Important Points
+
+* Linear Regression assumes a linear relationship
+* Sensitive to outliers
+* Easy to implement and interpret
+
+---
