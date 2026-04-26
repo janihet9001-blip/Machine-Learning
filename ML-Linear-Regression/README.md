@@ -1,6 +1,6 @@
-# 📊 Linear Regression Project
+#  Linear Regression Project
 
-## 🚀 Overview
+##  Overview
 
 This project predicts house prices using Linear Regression.
 
@@ -22,7 +22,7 @@ This project predicts house prices using Linear Regression.
 
 ## Output
 
-![Graph](images/Graph1.png)
+![Graph](Images/Graph1.png)
 
 ## What I Learned
 
