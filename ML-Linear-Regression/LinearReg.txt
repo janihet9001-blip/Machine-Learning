@@ -1,109 +1,156 @@
-# 📘 Linear Regression Notes
+# Linear & Multiple Linear Regression Notes
 
-## 🔹 Definition
+## Definition
 
-Linear Regression is a machine learning algorithm used to predict a continuous value by fitting a straight line to the data.
+Linear Regression is a machine learning algorithm used to predict a continuous value by finding the best relationship between input (X) and output (Y).
 
 ---
 
-## 🔹 Equation
+## Simple Linear Regression Equation
 
-y = mx + b
+ŷ = mx + b
 
 Where:
 
-* x = Independent variable (input)
-* y = Dependent variable (output)
-* m = Slope (rate of change)
-* b = Intercept (starting value)
+* x = input (independent variable)
+* y = actual output
+* ŷ = predicted output
+* m = slope (rate of change)
+* b = intercept (starting value)
 
 ---
 
-## 🔹 Slope (m)
+## Multiple Linear Regression Equation
 
-* Represents how much y changes when x increases by 1
-* Determines steepness of the line
+ŷ = m₁x₁ + m₂x₂ + ... + b
+
+Where:
+
+* x₁, x₂ = multiple input features
+* m₁, m₂ = impact of each feature
+* b = base value
+
+---
+
+## Slope (m)
+
+* Represents how much output changes when input increases by 1
+* Determines strength of relationship
 
 ### Cases:
 
-* m > 0 → Positive relationship (y increases with x)
-* m < 0 → Negative relationship (y decreases with x)
-* m = 0 → No relationship (horizontal line)
+* m > 0 → positive relationship
+* m < 0 → negative relationship
+* m = 0 → no relationship
 
 ---
 
-## 🔹 Intercept (b)
+## Intercept (b)
 
-* Value of y when x = 0
-* Starting point of the line on y-axis
-
----
-
-## 🔹 Goal of Linear Regression
-
-To find the best values of m and b such that predicted values are as close as possible to actual values.
+* Value of output when all inputs = 0
+* Starting point of the model
 
 ---
 
-## 🔹 Prediction Formula
+## Goal of Linear Regression
 
-y(predicted) = m × x + b
+To find the best values of m (or m₁, m₂, …) and b such that predictions are as close as possible to actual values.
 
 ---
 
-## 🔹 Error (Mean Squared Error - MSE)
+## Prediction
+
+ŷ = mx + b
+(or for multiple inputs: ŷ = m₁x₁ + m₂x₂ + b)
+
+---
+
+## Error (Mean Squared Error - MSE)
 
 MSE = (1/n) Σ (y - ŷ)²
 
-Where:
-
-* y = actual value
-* ŷ = predicted value
-
-👉 Lower MSE = better model
+* Measures difference between actual and predicted values
+* Lower MSE = better model
 
 ---
 
-## 🔹 Steps in Linear Regression
+## Steps in Linear Regression
 
-1. Load data
-2. Split into input (X) and output (Y)
-3. Train model using training data
-4. Predict using test data
-5. Evaluate using MSE
-6. Use model for new predictions
+1. Load dataset
+2. Separate input (X) and output (Y)
+3. Split data into training and testing
+4. Train model
+5. Predict values
+6. Evaluate using MSE
+7. Use model for new predictions
 
 ---
 
-## 🔹 Train-Test Split
+## Train-Test Split
 
 * Training data → used to train model
 * Testing data → used to evaluate model
 
-👉 Purpose:
-To check model performance on unseen data and avoid overfitting
+Purpose:
+
+* Check performance on unseen data
+* Avoid overfitting
 
 ---
 
-## 🔹 Key Concepts
+## Feature Scaling (Important - Day 3)
 
-* Overfitting: Model memorizes training data, performs poorly on new data
-* Underfitting: Model is too simple, cannot capture pattern
+* Different features can have different ranges
+* Example:
+
+  * size → 1000–2000
+  * bedrooms → 1–5
+
+Problem:
+
+* Model becomes unbalanced
+
+Solution:
+
+* Use StandardScaler to normalize data
+
+Important Rule:
+
+* If you scale training data → always scale new input before prediction
 
 ---
 
-## 🔹 Real-Life Examples
+## Coefficients (m values)
+
+* Represent importance of each feature
+* Higher coefficient = stronger impact
+* Cannot compare directly without scaling
+
+---
+
+## Overfitting vs Underfitting
+
+* Overfitting:
+  Model memorizes training data and performs poorly on new data
+
+* Underfitting:
+  Model is too simple and cannot learn pattern
+
+---
+
+## Real-Life Examples
 
 * House price prediction
 * Salary prediction
-* Marks prediction
+* Sales forecasting
 
 ---
 
-## 🔹 Important Points
+## Important Points
 
-* Linear Regression assumes a linear relationship
+* Assumes linear relationship
 * Sensitive to outliers
-* Easy to implement and interpret
+* Easy to understand and implement
+* Works well for simple problems
 
 ---
